@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const PostSchema = new mongoose.Schema({
+const EventSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -10,6 +10,6 @@ const PostSchema = new mongoose.Schema({
     }
 });
 
-const Post = mongoose.model('post', PostSchema);
+const Event = mongoose.model('post', EventSchema);
 
-module.exports = Post;
+module.exports = Event;
