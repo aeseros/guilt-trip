@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+// const Location = require('./Location.model');
+
 const EventSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -7,9 +9,19 @@ const EventSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
+    },
+    date: {
+        type: String,
+        required: true,
+        default: Date.now()
+        // date utils
+    },
+    location: {
+        type: String,
+        required: false,
     }
 });
 
-const Event = mongoose.model('post', EventSchema);
+const Event = mongoose.model('event', EventSchema);
 
 module.exports = Event;

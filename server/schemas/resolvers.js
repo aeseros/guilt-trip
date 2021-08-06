@@ -1,41 +1,27 @@
-const Post = require('../models/Event.model');
-const User = require('../models/User.model');
-
-const { GraphQLScalarType, Kind } = require('graphql');
-
-const dateScalar = new GraphQLScalarType({
-    name: 'Date',
-    description: 'Date custom scalar type',
-    serialize(value) {
-      return value.getTime(); // Convert outgoing Date to integer for JSON
-    },
-    parseValue(value) {
-      return new Date(value); // Convert incoming integer to Date
-    },
-    parseLiteral(ast) {
-      if (ast.kind === Kind.INT) {
-        return new Date(parseInt(ast.value, 10)); // Convert hard-coded AST string to integer and then to Date
-      }
-      return null; // Invalid hard-coded value (not an integer)
-    },
-  });
+const Event = require('../models/Event.model');
+// const User = require('../models/User.model');
 
 const resolvers = {
-    Query: {
-        getAllEvents: async () => {
-            // const posts = await Post.find()
-            // return posts
-            return await Event.find();
-        }
+  Query: {
+    // get all events
+    getAllEvents: async () => {
+      // const events = await Event.find()
+      // return events
+      return await Event.find();
     },
-    Mutation: {
-        createPost: async (parent, args, context, info) => {
-            const { title, description } = args.post
-            const post = new Post({ title, description })
-            await post.save();
-            return post;
-        }
-    }
+    // getEvent: async (_, args, _, _) => {
+    //   const {id} = args
+    // }
+  },
+  Mutation: {
+    createEvent: async (parent, args, context, info) => {
+      const { title, description, location, date } = args.event
+      const event = new Event({ title, description, location, date })
+      await event.save();
+      return event;
+    },
+    
+  }
 };
 
 module.exports = resolvers;
