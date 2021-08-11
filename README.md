@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Guilt Trip
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Capture your most precious moments with Guilt Trip!
 
-## Available Scripts
+---
+### Table of Contents
 
-In the project directory, you can run:
+- [Project Description](#project-description)
+- [Reference Links](#reference-links)
+  - [Guilt Trip Application GitHub Repo](https://github.com/a-ukp/guilt-trip)
+  - [Guilt Trip Application Deployed Site]()
+- [User Story](#user-story)
+- [Concept](#concept)
+- [Application Features](#application-features)
+- [Installation](#installation)
+- [Technologies](#technologies)
+<!-- - [Future Development](#future-development) -->
+- [Team Members](#team-members)
 
-### `npm start`
+---
+## Project Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A travel journal app focused on data entry from the user to neatly upload and categorize user input information about their Family, Business and Vacation trip(s).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
+## Reference Links
 
-### `npm test`
+Link to GitHub Repo used for application development:
+[Guilt Trip Application GitHub Repo](https://github.com/a-ukp/guilt-trip)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Link to Guilt Trip Application deployed on Heroku:
+[Guilt Trip Application Deployed Site]()
 
-### `npm run build`
+---
+## User Story
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Upon starting the App, users will be greeted with a Sign up/Login form showing a randomly generated photograph from the Unsplash API (related directly to the search term 'travel').
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Users who sign up and login will be granted access to input information including their title, journal entry, specific category of desired trip and upload photographs that will call an API to return an array of results in the form card(s) accessible from the My Trips sidebar navigation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+## Concept
 
-### `npm run eject`
+This application is a full stack app that grants users the ability to store and organize journal entries and photographs of their trips.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
+## Application Features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The user can **Sign Up** and **Login**.
+- The user can see his/her **Profile**.
+- The user can view, create, and edit the cards under My Trips.
+- The user can **Logout**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
+## Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To develop and launch the Application locally please follow the instructions below:
+- To start, please install **Node.js** which can be accessed from this [Link](https://nodejs.org/en/) to download the application.
+- Clone the Repository using Terminal: `git clone git@github.com:a-ukp/guilt-trip.git`
+- Change directory, "cd" into the Local Folder
+- Install Dependencies with: `npm install`
+- To run the Application you will need to run: `npm start`
+- When complete, the web application should open in a new window. If browser window does not open, navigate to - https://localhost:3000 
 
-## Learn More
+Once all dependencies are installed run `npm run start` to start the application locally. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
+## Technologies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Node.js
+- React.js
+- Material UI
+- `NPM Packages` such as:
+  - axios
+  - clsx
+  - react-router-dom
+  - react-masonry-css
+  - date-fns
+  - json-server
 
-### Code Splitting
+---
+<!-- ## Future Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For **future** project development, we would like to add the following features to the Application:
+- 
 
-### Analyzing the Bundle Size
+--- -->
+## Team Members
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Front End Development:
+- [Carlos Barrientos](https://github.com/WitnessMyHands)
+- [Paul Turner](https://github.com/Pgturn68)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Back End Development:
+- [Anna Uyen](https://github.com/a-ukp)
+- [Mohammed Ottun](https://github.com/MohammedOttun)
+- [Cesar De La Portilla](https://github.com/DLP713)
