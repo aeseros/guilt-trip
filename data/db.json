@@ -1,0 +1,22 @@
+{
+    "notes": [
+      {
+        "title": "Family Trip Title",
+        "details": "",
+        "category": "family",
+        "id": 1
+      },
+      {
+        "title": "Business Trip Title",
+        "details": "",
+        "category": "business",
+        "id": 2
+      },
+      {
+        "title": "Vacation Trip Title",
+        "details": "",
+        "category": "vacation",
+        "id": 3
+      }
+    ]
+  }
