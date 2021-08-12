@@ -4,18 +4,16 @@ import gql from 'graphql-tag';
 
 import { Grid } from 'semantic-ui-react';
 // import { events } from '../../../server/models/Event';
-import EventCard from '../components/EventCard';
+// import EventCard from '../components/EventCard';
 
-async function Home() {
-  const { loading, data: {getAllEvents: events} } = useQuery(QUERY_EVENTS);
+function Home() {
+  const { loading, data } = useQuery(QUERY_EVENTS);
 
   // : {getAllEvents: events}
 
-  // const eventList = data?.events || [];
-
-  // if(data){
-  //   console.log(data);
-  // }
+  if(data){
+    console.log(data);
+  }
 
   return (
     <Grid columns={3} divided>
@@ -23,7 +21,7 @@ async function Home() {
         <h1>Recent Events</h1>
       </Grid.Row>
 
-      <Grid.Row>
+      {/* <Grid.Row>
         {loading ? (
           <h1>Loading posts...</h1>
         ) : (
@@ -33,7 +31,7 @@ async function Home() {
             </Grid.Column>
           ))
         )}
-      </Grid.Row>
+      </Grid.Row> */}
     </Grid>
   )
 }
