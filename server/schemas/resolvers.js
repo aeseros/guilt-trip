@@ -1,5 +1,9 @@
-const Event = require('../models/Event.model');
-// const User = require('../models/User.model');
+const Event = require('../models/Event');
+const User = require('../models/User');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const { signToken } = require('../utils/auth');
+const { UserInputError, AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
   Query: {
@@ -20,7 +24,44 @@ const resolvers = {
       await event.save();
       return event;
     },
-    
+
+    createUser: async (parent, args, context, info) => {
+      const { username, email, password } = args.user
+      const newUser = new User({ username, email, password })
+      await newUser.save();
+
+      // display error on front end
+      const user = await User.findOne({ username });
+      if(user){
+        throw new UserInputError('Username is taken'), {
+          errors: {
+            username: 'This username is taken'
+          }
+        }
+      }
+
+      const token = signToken(newUser);
+      
+      return { token, newUser };
+    },
+
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if(!user) {
+        throw new AuthenticationError('user does not exist')
+      }
+
+      const correctPassword = await User.findOne({ password });
+
+      if(!correctPassword) {
+        throw new AuthenticationError('incorrect password')
+      }
+
+      const token = signToker(user)
+
+      return { token, user }
+    }
   }
 };
 
