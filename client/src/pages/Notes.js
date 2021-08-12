@@ -17,7 +17,7 @@ export default function Notes() {
       method: 'DELETE'
     })
 
-    const newNotes = notes.filter(note => note.id != id)
+    const newNotes = notes.filter(note => note.id !== id)
     setNotes(newNotes)
   }
   // Responsive Breakpoints
