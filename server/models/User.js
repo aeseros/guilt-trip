@@ -1,8 +1,9 @@
-const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 // import event schema
-const eventSchema = require("./Event");
+const Event = require("./Event");
 
 const userSchema = new Schema(
 	{
@@ -20,7 +21,8 @@ const userSchema = new Schema(
 		password: {
 			type: String,
 			required: true,
-		}
+		},
+		events: [Event.schema]
 	},
 	{
 		toJSON: {
@@ -49,6 +51,6 @@ userSchema.virtual("eventCount").get(function () {
 	return this.events.length;
 });
 
-const User = model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;

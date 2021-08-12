@@ -1,28 +1,45 @@
 const Event = require('../models/Event');
 const User = require('../models/User');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 const { signToken } = require('../utils/auth');
 const { UserInputError, AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
   Query: {
-    // get all events
-    getAllEvents: async () => {
+    getEvent: async (parent, { eventId }) => {
       // const events = await Event.find()
       // return events
-      return await Event.find();
+      // return await Event.find();
+      const event = await Event.findById(eventId);
+      if(event){
+        return event;
+      } else {
+        throw new Error('Event not found')
+      } 
     },
-    // getEvent: async (_, args, _, _) => {
-    //   const {id} = args
-    // }
+    getAllEvents: async => {
+      return Event.find({});
+    }
   },
+
   Mutation: {
     createEvent: async (parent, args, context, info) => {
       const { title, description, location, date } = args.event
-      const event = new Event({ title, description, location, date })
+      const event = new Event({ 
+        title, 
+        description, 
+        location,
+        user: User._id,
+        username: User.username,
+        createdAt: new Date().toISOString()
+      })
       await event.save();
       return event;
+    },
+
+    deleteEvent: async (parent, args, context, info) => {
+      const { id } = args
+      await Event.findByIdAndDelete(id)
+      return "Post has been deleted";
     },
 
     createUser: async (parent, args, context, info) => {
@@ -41,7 +58,6 @@ const resolvers = {
       }
 
       const token = signToken(newUser);
-      
       return { token, newUser };
     },
 
@@ -58,8 +74,7 @@ const resolvers = {
         throw new AuthenticationError('incorrect password')
       }
 
-      const token = signToker(user)
-
+      const token = signToken(user)
       return { token, user }
     }
   }
