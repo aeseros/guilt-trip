@@ -1,11 +1,10 @@
 import React from 'react';
-// eslint-disable-next-line
 import  { BrowserRouter as Router, Route } from 'react-router-dom'
-// import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-
+import { Container } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import './App.css';
 
+import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -13,17 +12,21 @@ import Register from './pages/Register';
 function App() {
   return (
     <Router>
-      <Route exact path="/">
-        <Home />
-      </Route>
+      <Container>
+        <NavBar />
 
-      <Route exact path="/login">
-        <Login />
-      </Route>
-      
-      <Route exact path="/register">
-        <Register />
-      </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+        <Route exact path="/login">
+          <Login />
+        </Route>
+
+        <Route exact path="/register">
+          <Register />
+        </Route>
+      </Container>
     </Router>
   );
 }

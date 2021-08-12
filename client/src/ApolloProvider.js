@@ -7,7 +7,7 @@ import { ApolloProvider } from '@apollo/react-hooks'
 
 // change when deployed to heroku
 const httpLink = createHttpLink ({
-  uri: 'http://localhost:5000'
+  uri: '/graphql'
 });
 
 const client = new ApolloClient({
