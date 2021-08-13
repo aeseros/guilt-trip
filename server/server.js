@@ -8,7 +8,7 @@ const  { typeDefs, resolvers } = require('./schemas');
 dotenv.config();
 
 async function startServer() {
-
+    try {
     const app = express();
     const PORT = process.env.PORT || 5000;
     const apolloServer = new ApolloServer({
@@ -44,7 +44,9 @@ async function startServer() {
             console.log(`Use GraphQL at http://localhost:${PORT}${apolloServer.graphqlPath}`);
         });
     });
-
+    } catch {
+        console.log(err);
+    }
 };
 
 startServer();
