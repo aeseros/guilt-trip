@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv');
 const { ApolloServer } = require('apollo-server-express');
 const db = require('./config/connection');
+const dotenv = require('dotenv');
 const  { typeDefs, resolvers } = require('./schemas');
 
 dotenv.config();
