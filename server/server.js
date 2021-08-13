@@ -1,14 +1,16 @@
 const express = require('express');
-const dotenv = require('dotenv');
+const path = require('path');
 const { ApolloServer } = require('apollo-server-express');
+const db = require('./config/connection');
+const dotenv = require('dotenv');
 const  { typeDefs, resolvers } = require('./schemas');
 
 dotenv.config();
-const db = require('./config/connection');
 
 async function startServer() {
-    const PORT = process.env.PORT || 5000;
+
     const app = express();
+    const PORT = process.env.PORT || 5000;
     const apolloServer = new ApolloServer({
         typeDefs,
         resolvers,
@@ -18,15 +20,31 @@ async function startServer() {
 
     apolloServer.applyMiddleware({ app });
 
-    app.use((req, res) => {
-        res.send('hello from express apollo server! this page says cannot get /')
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json());
+
+    // got rid of cors access error
+    // app.use(function (req, res, next) {
+    //     res.header("Access-Control-Allow-Origin", "*");
+    //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    //     next();
+    //  })
+
+    if (process.env.NODE_ENV == 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')));
+    }
+
+    app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
     });
 
     db.once('open', () => {
         app.listen(PORT, () => {
-            console.log(`listening on http://localhost:${PORT}/`)
-        })
+            console.log(`API server running on port ${PORT}!`);
+            console.log(`Use GraphQL at http://localhost:${PORT}${apolloServer.graphqlPath}`);
+        });
     });
+
 };
 
 startServer();

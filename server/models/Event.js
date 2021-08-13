@@ -1,24 +1,30 @@
 const mongoose = require('mongoose');
-// const Location = require('./Location.model');
+const { Schema } = mongoose;
 
 const EventSchema = new mongoose.Schema({
     title: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     description: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     date: {
-        type: String,
-        required: true,
-        default: Date.now()
-        // date utils
+      type: String,
+      required: false,
     },
     location: {
-        type: String,
-        required: false,
+      type: String,
+      required: false,
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    },
+    createdAt: {
+      type: String,
+      required: false
     }
 });
 

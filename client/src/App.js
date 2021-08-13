@@ -1,46 +1,33 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Notes from './pages/Notes'
-import Create from './pages/Create'
-import { createTheme, ThemeProvider } from '@material-ui/core'
-import { blue } from '@material-ui/core/colors'
-import Layout from './components/Layout'
+import React from 'react';
+import  { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Container } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
+import './App.css';
 
-// import Sidebar from './components/Sidebar';
-// import Login from './components/Login'
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
-const theme = createTheme({
-  palette: {
-    secondary: blue
-  },
-  typography: {
-    fontFamily: 'Asap',
-    fontWeightLight: 400,
-    fontWeightRegular: 500,
-    fontWeightMedium: 600,
-    fontWeightBold: 700,
-  }
-})
-
-function App() {  
+function App() {
   return (
-    // <div className='App'>
-    //   <Login />
-    // </div>
-    <ThemeProvider theme={theme}>
-    {/* <Sidebar /> */}
     <Router>
-      <Layout>
-        <Switch>
-          <Route exact path="/">
-            <Notes />
-          </Route>
-          <Route path="/create">
-            <Create />
-          </Route>
-        </Switch>
-      </Layout>
+      <Container>
+        <NavBar />
+
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+        <Route exact path="/login">
+          <Login />
+        </Route>
+
+        <Route exact path="/register">
+          <Register />
+        </Route>
+      </Container>
     </Router>
-    </ThemeProvider>
   );
 }
 
