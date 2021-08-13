@@ -8,10 +8,14 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Trips from './pages/Trips';
+
+import { AuthProvider } from './context/auth'
 
 function App() {
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
       <Container>
         <NavBar />
 
@@ -26,8 +30,14 @@ function App() {
         <Route exact path="/register">
           <Register />
         </Route>
+
+        <Route exact path="/trips">
+          <Trips />
+        </Route>
+
       </Container>
     </Router>
+    </AuthProvider>
   );
 }
 
