@@ -16,6 +16,7 @@ Capture your most precious moments with Guilt Trip!
 - [Technologies](#technologies)
 <!-- - [Future Development](#future-development) -->
 - [Team Members](#team-members)
+- [Legend](#legend)
 
 ---
 ## Project Description
@@ -87,11 +88,17 @@ For **future** project development, we would like to add the following features 
 --- -->
 ## Team Members
 
-Front End Development:
-- [Carlos Barrientos](https://github.com/WitnessMyHands)
-- [Paul Turner](https://github.com/Pgturn68)
+|Carlos Barrientos||Paul Turner||Anna Uyen||Mohammed Ottun||Cesar De La Portilla|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|![myImage](https://avatars.githubusercontent.com/u/78119609?v=4)|![myImage](https://avatars.githubusercontent.com/u/78170157?v=4)|![myImage](https://avatars.githubusercontent.com/u/79038087?v=4)|![myImage](https://avatars.githubusercontent.com/u/4733426?v=4)|![myImage](https://avatars.githubusercontent.com/u/77466119?v=4)
+| <a href="https://github.com/WitnessMyHands" target="_blank">Carlos' Github | <a href="https://github.com/Pgturn68" target="_blank">Paul's Github | <a href="https://github.com/a-ukp" target="_blank">Anna's Github | <a href="https://github.com/MohammedOttun" target="_blank">Mohammed's Github | <a href="https://github.com/DLP713" target="_blank">Cesar's Github |""|
+  
+ ## Legend
 
-Back End Development:
-- [Anna Uyen](https://github.com/a-ukp)
-- [Mohammed Ottun](https://github.com/MohammedOttun)
-- [Cesar De La Portilla](https://github.com/DLP713)
+|ID  |Name  |
+|---------|----|
+|A     |Carlos Barrientos|
+|B     |Paul Turner|
+|C     |Anna Uken|
+|D     |Mohammed Ottun|
+|E     |Cesar De La Portilla|
