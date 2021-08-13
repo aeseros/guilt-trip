@@ -17,6 +17,7 @@ const resolvers = {
       } 
     },
     getAllEvents: async => {
+      console.log('got events')
       return Event.find({});
     }
   },
