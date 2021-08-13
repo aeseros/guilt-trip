@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 import { Grid } from 'semantic-ui-react';
 // import { events } from '../../../server/models/Event';
 import EventCard from '../components/EventCard';
+import EventForm from '../components/EventForm';
 
 function Home() {
   const { loading, data } = useQuery(QUERY_EVENTS);
@@ -23,7 +24,11 @@ function Home() {
   return (
     <Grid columns={3} divided>
       <Grid.Row>
-        <h1>Recent Events</h1>
+        <h1>Trips</h1>
+      </Grid.Row>
+
+      <Grid.Row>
+        <EventForm />
       </Grid.Row>
 
       <Grid.Row>

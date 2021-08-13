@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'semantic-ui-react';
+import { useHistory } from 'react-router-dom';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
 
@@ -25,6 +26,11 @@ function Register(props) {
   const onSubmit = (event) => {
     event.preventDefault();
     addUser();
+  }
+
+  let history = useHistory();
+  const redirect = () => {
+    history.push('/trips')
   }
 
   return (
@@ -57,7 +63,7 @@ function Register(props) {
           value={values.password}
           onChange={onChange}
         />
-        <Button type="submit" primary>Register</Button>
+        <Button onClick={redirect} type="submit" primary>Register</Button>
       </Form>
     </div>
   )

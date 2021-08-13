@@ -10,7 +10,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Trips from './pages/Trips';
 
-import { AuthProvider } from './context/auth'
+import { AuthProvider } from './utils/auth'
 
 function App() {
   return (
