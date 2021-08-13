@@ -16,6 +16,7 @@ Capture your most precious moments with Guilt Trip!
 - [Technologies](#technologies)
 <!-- - [Future Development](#future-development) -->
 - [Team Members](#team-members)
+- [Legend](#legend)
 
 ---
 ## Project Description
@@ -86,12 +87,30 @@ For **future** project development, we would like to add the following features 
 
 --- -->
 ## Team Members
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/WitnessMyHands"><img src="https://avatars.githubusercontent.com/u/78119609?v=4?s=72" alt=""/><br /><sub><b>Carlos Barrientos</b></sub></a><br /></td>
+<td align="center"><a href="https://github.com/PGTurn68"><img src="https://avatars.githubusercontent.com/u/78170157?v=4?s=72" alt=""/><br /><sub><b>Paul Turner</b></sub></a><br /></td>
+<td align="center"><a href="https://github.com/a-ukp"><img src="https://avatars.githubusercontent.com/u/79038087?v=4?s=72" alt=""/><br /><sub><b>Anna Uyen</b></sub></a><br /></td>
+<td align="center"><a href="https://github.com/MohammedOttun"><img src="https://avatars.githubusercontent.com/u/4733426?v=4?s=72" alt=""/><br /><sub><b>Mohammed Ottun</b></sub></a><br /></td>
+<td align="center"><a href="https://github.com/DLP713"><img src="https://avatars.githubusercontent.com/u/77466119?v=4?s=72" alt=""/><br /><sub><b>Cesar De La Portilla</b></sub></a><br /></td>
+  </tr>
+</table>
 
-Front End Development:
-- [Carlos Barrientos](https://github.com/WitnessMyHands)
-- [Paul Turner](https://github.com/Pgturn68)
+## Legend
+|ID  |Name  |
+|---------|----|
+|A     |Carlos Barrientos|
+|B     |Paul Turner|
+|C     |Anna Uken|
+|D     |Mohammed Ottun|
+|E     |Cesar De La Portilla|
 
-Back End Development:
-- [Anna Uyen](https://github.com/a-ukp)
-- [Mohammed Ottun](https://github.com/MohammedOttun)
-- [Cesar De La Portilla](https://github.com/DLP713)
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Questions
+*Please contact Anna Uyen via GitHub with any questions or concerns.*
+
+- https://github.com/a-ukp
