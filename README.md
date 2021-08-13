@@ -105,3 +105,12 @@ For **future** project development, we would like to add the following features 
 |C     |Anna Uken|
 |D     |Mohammed Ottun|
 |E     |Cesar De La Portilla|
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Questions
+*Please contact Anna Uyen via GitHub with any questions or concerns.*
+
+- https://github.com/a-ukp
