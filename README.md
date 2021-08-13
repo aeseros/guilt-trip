@@ -90,7 +90,7 @@ For **future** project development, we would like to add the following features 
 
 |Carlos Barrientos||Paul Turner||Anna Uyen||Mohammed Ottun||Cesar De La Portilla|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|![myImage](https://avatars.githubusercontent.com/u/78119609?v=4)|![myImage](https://avatars.githubusercontent.com/u/78170157?v=4)|![myImage](https://avatars.githubusercontent.com/u/79038087?v=4)|![myImage](https://avatars.githubusercontent.com/u/4733426?v=4)|![myImage](https://avatars.githubusercontent.com/u/77466119?v=4)
+|![myImage](https://avatars.githubusercontent.com/u/78119609?v=4?size=72)|![myImage](https://avatars.githubusercontent.com/u/78170157?v=4?size=72)|![myImage](https://avatars.githubusercontent.com/u/79038087?v=4?size=72)|![myImage](https://avatars.githubusercontent.com/u/4733426?v=4?size=72)|![myImage](https://avatars.githubusercontent.com/u/77466119?v=4?size=72)
 | <a href="https://github.com/WitnessMyHands" target="_blank">Carlos' Github | <a href="https://github.com/Pgturn68" target="_blank">Paul's Github | <a href="https://github.com/a-ukp" target="_blank">Anna's Github | <a href="https://github.com/MohammedOttun" target="_blank">Mohammed's Github | <a href="https://github.com/DLP713" target="_blank">Cesar's Github |""|
   
  ## Legend
